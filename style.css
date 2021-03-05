@@ -1,0 +1,291 @@
+body {
+  font-family: 'Lato', sans-serif;
+  margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.gradient {
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    margin: 0;
+    background: linear-gradient(180deg, rgba(255,255,255,0.1) 0%, rgba(0,0,0,0.2) 100%);
+
+}
+
+#background {
+  background-repeat: no-repeat;
+  background-size: 80%;
+  background-position: 50% 10%;
+}
+
+.clock {
+    font-size: 35px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-align: center;
+    position: relative;
+    top: 300px;
+}
+
+#date {
+	margin-top: -30px;
+	font-size: 30px;
+}
+
+main {
+	color: white;
+	display: flex;
+	justify-content: center;
+}
+
+.cloud {
+    width: 170px;
+    height: 70px;
+    position:absolute;
+    background:transparent url(img/front_cloud.png) 0 0 no-repeat;
+    background: #fff;
+    border-radius: 100px;
+}
+
+.cloud-top {
+    width: 90px;
+    height: 90px;
+    margin-left: 20px;
+    margin-right: 20px;
+    position:absolute;
+    background:transparent;
+    background: #fff;
+        -webkit-border-radius: 60px;
+    border-radius: 60px;
+}
+    
+.top01 {
+    top: 15px;
+        -webkit-animation: drift 25s linear infinite;
+        animation: drift 25s linear infinite;
+}
+
+.top02 {
+    top: 120px;
+    -webkit-animation: drift 35s linear 5s infinite backwards;
+    animation: drift 35s linear 5s infinite backwards;
+}
+
+.top03 {
+    top: 450px;
+    -webkit-animation: drift 25s linear 6s infinite backwards;
+    animation: drift 25s linear 6s infinite backwards;
+}
+
+.top04 {
+    top: 650px;
+    -webkit-animation: drift 40s linear 10s infinite backwards;
+    animation: drift 40s linear 10s infinite backwards;
+}
+
+
+.fcloud01 {
+    top:50px;
+    z-index:100;
+        -webkit-animation: drift 25s linear infinite;
+        -moz-animation: drift 25s linear infinite;
+        -o-animation: drift 25s linear infinite;
+    animation: drift 25s linear infinite;
+}
+
+.fcloud02 {
+    top:160px;
+    z-index: 200;
+        -webkit-animation: drift 35s linear 5s infinite backwards;
+        -moz-animation: drift 35s linear 5s infinite backwards;
+        -o-animation: drift 35s linear 5s infinite backwards;
+    animation: drift 35s linear 5s infinite backwards;
+}
+
+.fcloud03 {
+    top:500px;
+    z-index: 200;
+        -webkit-animation: drift 25s linear 6s infinite backwards;
+        -moz-animation: drift 25s linear 6s infinite backwards;
+        -o-animation: drift 25s linear 6s infinite backwards;
+    animation: drift 25s linear 6s infinite backwards;
+}
+
+
+.fcloud04 {
+    top:700px;
+    z-index: 10;
+        -webkit-animation: drift 40s linear 10s infinite backwards;
+        -moz-animation: drift 40s linear 10s infinite backwards;
+        -o-animation: drift 40s linear 10s infinite backwards;
+    animation: drift 40s linear 10s infinite backwards;
+}
+
+@-webkit-keyframes drift {
+    from {-webkit-transform:translateX(-80vw);}
+    to {-webkit-transform:translateX(25vw);}
+}
+
+@-moz-keyframes drift {
+    from {-moz-transform:translateX(-80vw);}
+    to {-moz-transform:translateX(25vw);}
+}
+
+@-o-keyframes drift {
+    from {-o-transform:translateX(-80vw);}
+    to {-o-transform:translateX(25vw);}
+}
+
+@-keyframes drift {
+    from {transform:translateX(-80vw);}
+    to {transform:translateX(25vw);;}
+}
+
+@media only screen and (min-width: 570px) {
+
+    .clock {
+        font-size: 50px;
+        top: 200px;
+    }
+
+    #background {
+  background-repeat: no-repeat;
+  background-size: 60%;
+  background-position: 50% 160%;
+
+    }
+
+    html {
+    	height: 100%;
+    	max-height: 600px;
+    }
+
+    body {
+    	min-height: 100%;
+    }
+}
+
+@media only screen and (min-width: 870px) {
+
+    .clock {
+        font-size: 80px;
+        top: 360px;
+        text-align: left;
+        padding-left: 20px;
+    }
+
+    #date {
+        margin-top: 1vw;
+        margin-left: 1vw;
+    }
+
+    p {
+        margin: 0;
+    }
+
+    p:first-of-type {
+        margin-top: 15vw;
+    }
+
+    main {
+    	justify-content: left;
+    	vertical-align: bottom;
+    }
+
+     #background {
+  background-position: 50% -50%;
+    }
+
+    .top01 {
+        left: 20px;
+}
+
+.top02 {
+    left: 20px;
+}
+
+.top03 {
+    left: 20px;
+}
+
+.top04 {
+    left: 20px;
+}
+
+}
+
+@media only screen and (min-width: 1120px) {
+    .clock {
+        font-size: 100px;
+        bottom: 200px;
+        margin-bottom: 0;
+        display: inline-block;
+    }
+
+    #date {
+    	font-size: 70px;
+    }
+
+    #background {
+    	background-repeat: no-repeat;
+    	background-position: 90% 10%;
+        background-size: 40%;
+    }
+
+.top01 {
+    top: 15px;
+}
+
+.top02 {
+    top: 120px;
+}
+
+.top03 {
+    top: 340px;
+}
+
+.top04 {
+    top: 760px;
+}
+
+.fcloud01 {
+    top: 50px;
+}
+
+.fcloud02 {
+    top: 160px;
+}
+
+.fcloud03 {
+    top: 400px;
+}
+
+
+.fcloud04 {
+    top: 780px;
+}
+
+    @-webkit-keyframes drift {
+    from {-webkit-transform:translateX(-30vw);}
+    to {-webkit-transform:translateX(50vw);}
+}
+
+@-moz-keyframes drift {
+    from {-moz-transform:translateX(-30vw);}
+    to {-moz-transform:translateX(50vw);}
+}
+
+@-o-keyframes drift {
+    from {-o-transform:translateX(-30vw);}
+    to {-o-transform:translateX(50vw);}
+}
+
+@-keyframes drift {
+    from {transform:translateX(-30vw);}
+    to {transform:translateX(50vw);;}
+}
+}
